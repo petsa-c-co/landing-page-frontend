@@ -1,0 +1,38 @@
+{
+  "/": {
+    "titulo": "Petrogas S.A | Servicios Petroleros",
+    "descripcion": "Operación y mantenimiento de plantas de tratamiento de gas, seguridad de procesos y transporte de personal. Empresa de Cutral-Có con más de 30 años en la industria del petróleo y el gas."
+  },
+  "/nosotros": {
+    "titulo": "Nosotros",
+    "descripcion": "Petrogas S.A nació en Cutral-Có en 1992, fundada por 42 ex empleados de YPF. Hoy es una de las empresas de servicios petroleros más importantes de la cuenca Neuquina."
+  },
+  "/servicios": {
+    "titulo": "Servicios",
+    "descripcion": "Operación, mantenimiento y reparación integral de plantas de tratamiento de gas, instalaciones complementarias, calibración de válvulas PSV y transporte terrestre de personal."
+  },
+  "/certificaciones": {
+    "titulo": "Certificaciones",
+    "descripcion": "Petrogas S.A trabaja bajo las normas ISO 9001:2015 de calidad, ISO 14001:2015 de medio ambiente e ISO 45001:2018 de seguridad y salud en el trabajo."
+  },
+  "/rrhh": {
+    "titulo": "Recursos Humanos",
+    "descripcion": "Política de recursos humanos de Petrogas S.A: formación continua, seguridad en el trabajo y desarrollo profesional de nuestro equipo en la cuenca Neuquina."
+  },
+  "/trabaja-con-nosotros": {
+    "titulo": "Trabajá con nosotros",
+    "descripcion": "Sumate al equipo de Petrogas S.A. Buscamos personal para operación, mantenimiento y transporte en yacimientos de la provincia del Neuquén."
+  },
+  "/novedades-y-prensa": {
+    "titulo": "Novedades y Prensa",
+    "descripcion": "Novedades, comunicados y apariciones en prensa de Petrogas S.A, empresa de servicios petroleros de Cutral-Có, Neuquén."
+  },
+  "/contacto": {
+    "titulo": "Contacto",
+    "descripcion": "Comunicate con Petrogas S.A. Chubut 850, Cutral-Có, provincia del Neuquén. Teléfonos 299-5573812 y 299-4960901."
+  },
+  "/privacidad": {
+    "titulo": "Aviso de Privacidad",
+    "descripcion": "Qué datos personales pide el sitio de Petrogas S.A, para qué se usan, con quién se comparten y cómo pedir acceso, corrección o borrado."
+  }
+}

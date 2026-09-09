@@ -1,0 +1,91 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+/* Modo oscuro por clase (no por prefers-color-scheme). Las utilidades `dark:`
+   se activan cuando el elemento cuelga de un ancestro con la clase `.dark`.
+   Esa clase la pone/saca el AdminLayout en <html> solo mientras estás en el
+   panel, así el sitio público queda siempre claro. */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-heading: "Oswald", sans-serif;
+  --font-body: "Open Sans", sans-serif;
+
+  --color-navy-50: #eef1fa;
+  --color-navy-100: #dde3f5;
+  --color-navy-200: #b8c3e8;
+  --color-navy-300: #8fa0d9;
+  --color-navy-400: #5f74c0;
+  --color-navy-500: #3d54a3;
+  /* Azul institucional exacto. Solo este paso de la rampa lo usa: el resto
+     está calibrado para legibilidad (navy-800 en títulos es más oscuro a
+     propósito), así que alinearlos todos cambiaría el aspecto del sitio. */
+  --color-navy-600: #24378f;
+  --color-navy-700: #213570;
+  --color-navy-800: #1c2f6b;
+  --color-navy-900: #141f47;
+  --color-navy-950: #0d1530;
+
+  --color-sky-400: #5aa8e6;
+  --color-sky-500: #3490dc;
+  --color-sky-600: #2a78ba;
+
+  --color-amber-50: #fff8e6;
+  --color-amber-500: #f2a900;
+  --color-amber-600: #c98a00;
+
+  /* Rojo de marca (el del logo: la "H" y el "S.A"). Se usa como ACENTO, poco
+     y casi siempre junto al azul en degradado; no pisa el `red` de Tailwind
+     que el panel reserva para acciones destructivas. */
+  /* Rojo institucional exacto del material oficial de la empresa. */
+  --color-petrogas-red-500: #ed1c24;
+  --color-petrogas-red-600: #c9181f;
+}
+
+/* El reset ya lo trae Preflight con `@import "tailwindcss"`: box-sizing
+   border-box, márgenes y padding en cero, headings y listas sin estilo del
+   navegador. No hace falta el clásico `* { margin: 0; padding: 0 }`. */
+@layer base {
+  html,
+  body,
+  #root {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: var(--font-body);
+  }
+
+  /* Tailwind 4 cambió el Preflight: los <button> pasaron a `cursor: default`
+     para seguir al navegador. Con eso, en todo el panel el puntero no cambia
+     al pasar por encima y los botones no se leen como clickeables. Se repone
+     acá y no con `cursor-pointer` en cada uno: eran decenas y el próximo
+     botón nuevo volvería a nacer sin manito.
+     El `:disabled` va aparte porque hereda el pointer y daría a entender que
+     el botón responde cuando no. */
+  button:not(:disabled),
+  [role="button"]:not([aria-disabled="true"]),
+  label:has(> input[type="checkbox"]),
+  summary {
+    cursor: pointer;
+  }
+
+  button:disabled,
+  [role="button"][aria-disabled="true"] {
+    cursor: not-allowed;
+  }
+}
+
+@layer components {
+  /* Ancho de página y márgenes laterales del sitio, en un solo lugar.
+     El max-width va aparte en cada sección (max-w-7xl para las anchas,
+     max-w-5xl o max-w-3xl para bloques de texto), porque cambia según el
+     contenido; lo que se comparte —y lo que conviene tocar una sola vez— son
+     el centrado y los gutters responsivos. */
+  .page-container {
+    @apply mx-auto px-4 sm:px-6 lg:px-8;
+  }
+}

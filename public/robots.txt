@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /admin
+Disallow: /acceder
+Disallow: /activate
+Disallow: /reset-password
+Disallow: /recuperar-clave
+
+Sitemap: https://petrogassa.com/sitemap.xml

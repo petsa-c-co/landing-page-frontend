@@ -1,0 +1,18 @@
+# Sin esto el COPY . . pisa el node_modules que instaló pnpm dentro del
+# contenedor con el de Windows, y los paquetes con binarios nativos (rollup,
+# esbuild, sharp) quedan compilados para el sistema equivocado.
+node_modules
+dist
+
+.git
+.env
+.env.*
+*.log
+.claude
+
+# De scripts/ se excluyen solo las herramientas manuales (favicon y fotos), que
+# no participan del build. prerender.mjs SÍ hace falta: `pnpm build` lo ejecuta
+# al final, y sin él la construcción de la imagen falla con
+# "Cannot find module '/app/scripts/prerender.mjs'".
+scripts/gen-favicon.cjs
+scripts/optimizar-fotos.mjs
