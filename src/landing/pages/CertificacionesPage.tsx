@@ -30,9 +30,8 @@ export const CertificacionesPage = () => {
         <div className="max-w-5xl page-container text-center">
           <p className="text-gray-600 leading-relaxed mb-4">
             Actualmente poseemos un Sistema de Gestión Integrado de Calidad,
-            Medio Ambiente, Seguridad y Salud Ocupacional y Seguridad Vial,
-            certificado bajo las normas ISO 9001:2015, ISO 14001:2015 e ISO
-            45001:2018.
+            Medio Ambiente, Seguridad y Salud en el trabajo, certificado bajo
+            las normas ISO 9001:2015, ISO 14001:2015 e ISO 45001:2018.
           </p>
           <p className="text-gray-600 leading-relaxed">
             Somos la primera compañía con Personal y Flota propia al servicio de
