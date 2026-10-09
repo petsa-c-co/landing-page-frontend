@@ -488,9 +488,7 @@ export const ApplicationForm = () => {
         </Button>
 
         {enviada && (
-          <p className="text-green-600 text-sm">
-            ✓ ¡Recibimos tu postulación! Te vamos a contactar.
-          </p>
+          <p className="text-green-600 text-sm">✓ ¡Recibimos tu postulación!</p>
         )}
       </div>
 
@@ -498,7 +496,7 @@ export const ApplicationForm = () => {
         <div className="mt-4 rounded-lg bg-red-50 ring-1 ring-red-100 p-4">
           <p className="text-red-700 text-sm">
             {gestionCaida
-              ? "No pudimos enviar tu postulación. Intentá de nuevo en unos minutos: no perdiste nada de lo que cargaste."
+              ? "No pudimos enviar tu postulación. Intentá de nuevo en unos minutos!."
               : status === 413
                 ? "El CV no puede pesar más de 5 MB."
                 : yaUbicado
